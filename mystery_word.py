@@ -47,9 +47,9 @@ def play_game(display, word, guesses, guessed, answer, evil, filename):
     char = input("Guess a letter! ")
     if (char.isalpha() == False):
         print("Please only guess letters!")
-    if(len(char) > 1):
+    elif(len(char) > 1):
         print("Please only guess one letter at a time!")
-    if (guessed.find(char) != -1):
+    elif (guessed.find(char) != -1):
         print("You've already guessed " + char + "! Please try again!")
     elif char in word:
         print(char + " is CORRECT!!!!")
